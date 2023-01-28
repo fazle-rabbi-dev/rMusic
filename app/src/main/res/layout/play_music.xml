@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FF0A0529">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Now Playing"
+		android:layout_gravity="center"
+		android:layout_margin="20dp"
+		android:textSize="35sp"
+		android:textStyle="bold"
+		android:textColor="#FFE6FF00"
+		android:fontFamily="@font/syne"
+		android:id="@+id/playmusicTextView1"
+		android:layout_centerHorizontal="true"/>
+
+	<ImageView
+		android:layout_gravity="center"
+		android:layout_height="200dp"
+		android:layout_width="200dp"
+		android:layout_centerHorizontal="true"
+		android:src="@drawable/bg"
+		android:layout_centerVertical="true"
+		android:id="@+id/playmusicImageView1"
+    
+     android:singleLine="true"
+     android:ellipsize="marquee"
+     android:marqueeRepeatLimit ="marquee_forever"
+     android:focusable="true"
+     android:focusableInTouchMode="true" 
+     android:scrollHorizontally="true"
+    />
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dp"
+		android:padding="10dp"
+		android:gravity="center"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/controler">
+
+		<SeekBar
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_marginBottom="20dp"
+			android:id="@+id/seekbar"
+			android:progressBackgroundTint="#FFEDEDED"
+			android:progressTint="#FFE4E912"
+			android:thumbTint="#FFE4E912"/>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center">
+
+			<ImageView
+				android:layout_height="40dp"
+				android:layout_width="40dp"
+				android:src="@drawable/prev_white"
+				android:background="#00000000"
+				android:id="@+id/prev"
+				android:layout_marginRight="6dp"/>
+
+			<ImageView
+				android:layout_height="37dp"
+				android:layout_width="37dp"
+				android:src="@drawable/backward_white"
+				android:background="#00000000"
+				android:id="@+id/backward"/>
+
+			<ImageView
+				android:layout_height="40dp"
+				android:layout_width="40dp"
+				android:src="@drawable/pause_white"
+				android:background="#00000000"
+				android:id="@+id/play"
+				android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp"/>
+
+			<ImageView
+				android:layout_height="37dp"
+				android:layout_width="37dp"
+				android:src="@drawable/forward_white"
+				android:background="#00000000"
+				android:id="@+id/forward"/>
+
+			<ImageView
+				android:layout_height="40dp"
+				android:layout_width="40dp"
+				android:src="@drawable/next_white"
+				android:background="#00000000"
+				android:id="@+id/next"
+				android:layout_marginLeft="6dp"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Text"
+		android:layout_below="@id/playmusicTextView1"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/current_song"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp"
+		android:gravity="center_horizontal"
+		android:textColor="#FFE3DBDB"/>
+
+</RelativeLayout>
+
